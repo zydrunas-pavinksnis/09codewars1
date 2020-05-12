@@ -101,3 +101,17 @@ function differenceInAges(ages){
 
 console.log(differenceInAges([82, 15, 6, 38, 35]), [6, 82, 76]);
 console.log(differenceInAges([57, 99, 14, 32]), [14, 99, 85]);
+
+console.log(`----------------------------------------`);
+
+function zeroFuel(distanceToPump, mpg, fuelLeft) {
+    let enough = false;
+    if (mpg * fuelLeft >= distanceToPump) {
+        enough = true
+    }
+    return enough
+
+};
+
+console.log(zeroFuel(50, 25, 2), true);
+console.log(zeroFuel(100, 50, 1), false);
