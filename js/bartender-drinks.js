@@ -165,5 +165,72 @@ console.log(countSheeps(array1), "There are 17 sheeps in total")
 
 console.log(`----------------------------------------`);
 
+function litres(time) {
+    let waterAmmount = Math.floor (time * .5);
+    return waterAmmount;
+}
 
+console.log(litres(3), 1,);
+console.log(litres(6.7), 3,);
+console.log(litres(11.8), 5,);
+console.log(litres(2), 1, 'should return 1 litre');
+console.log(litres(1.4), 0, 'should return 0 litres');
+console.log(litres(12.3), 6, 'should return 6 litres');
+console.log(litres(0.82), 0, 'should return 0 litres');
+console.log(litres(11.8), 5, 'should return 5 litres');
+console.log(litres(1787), 893, 'should return 893 litres');
+console.log(litres(0), 0, 'should return 0 litres');
 
+console.log(`----------------------------------------`);
+
+function guessBlue(blueStart, redStart, bluePulled, redPulled) {
+    let probability = (blueStart - bluePulled) / (blueStart + redStart - bluePulled - redPulled);
+    return probability
+}
+
+console.log(guessBlue(5, 5, 2, 3), 0.6);
+console.log(guessBlue(5, 7, 4, 3), 0.2);
+console.log(guessBlue(12, 18, 4, 6), 0.4);
+
+console.log(`----------------------------------------`);
+
+const areaOrPerimeter = function(l , w) {
+    let answer = 0;
+    if (l === w) {
+        answer = l*w;      
+    }
+    else {
+        answer = (l+w)*2;
+    }
+ return answer   
+ };
+
+ console.log(areaOrPerimeter(4 , 4) , 16);
+ console.log(areaOrPerimeter(6 , 10) , 32);
+
+ console.log(`----------------------------------------`);
+
+function century(year) {
+    let age = Math.floor( (year -1) / 100 ) + 1;
+    return age;
+}
+
+console.log(century(1705), 18, 'Testing for year 1705');
+console.log(century(1973), 20, 'Testing for year 1973');
+console.log(century(2001), 21, 'Testing for year 2001');
+console.log(century(2000), 20, 'Testing for year 2000');
+console.log(century(89), 1, 'Testing for year 89');
+
+console.log(`----------------------------------------`);
+
+function enough(cap, on, wait) {
+    let cant = wait - (cap - on);
+    if (cant < 0) {
+        cant = 0
+    }
+    return cant 
+}
+
+console.log(enough(10, 5, 5), 0);
+console.log(enough(100, 60, 50), 10);
+console.log(enough(20, 5, 5), 0);
