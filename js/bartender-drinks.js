@@ -117,3 +117,53 @@ console.log(zeroFuel(50, 25, 2), true);
 console.log(zeroFuel(100, 50, 1), false);
 
 console.log(`----------------------------------------`);
+
+function hero(bullets, dragons){
+    let survive = false;
+    if (bullets / 2 >= dragons) {
+        survive = true
+    }
+    return survive
+};
+
+console.log(hero(10, 5), true);
+console.log(hero(7, 4), false);
+console.log(hero(4, 5), false);
+console.log(hero(100, 40), true);
+console.log(hero(1500, 751), false);
+console.log(hero(0, 1), false);
+
+console.log(`----------------------------------------`);
+
+function doubleInteger(i) {
+    i = i * 2;
+    return i;
+}
+
+console.log(doubleInteger(2), 4);
+
+console.log(`----------------------------------------`);
+
+function countSheeps(arrayOfSheep) {
+    let quantity = 0;
+    for (let i = 0; i < arrayOfSheep.length; i++) {
+        if (arrayOfSheep[i] === true) {
+            quantity++    
+        };
+    }
+    return quantity
+}
+
+var array1 = [true,  true,  true,  false,
+    true,  true,  true,  true ,
+    true,  false, true,  false,
+    true,  false, false, true ,
+    true,  true,  true,  true ,
+    false, false, true,  true ];
+    
+console.log(countSheeps(array1), "There are 17 sheeps in total")
+
+console.log(`----------------------------------------`);
+
+
+
